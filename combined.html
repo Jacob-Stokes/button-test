@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined Iframe Widget</title>
+    <script>
+        function sendMessage() {
+            const iframe = document.getElementById('myIframe');
+            iframe.contentWindow.postMessage('runHandler', '*');
+        }
+    </script>
+</head>
+<body>
+    <h1>Combined Iframe Widget</h1>
+    <iframe id="myIframe" src="https://script.google.com/macros/s/your_script_id/exec" width="300" height="150" frameborder="0"></iframe>
+    <button onclick="sendMessage()">Run Handler</button>
+</body>
+</html>
